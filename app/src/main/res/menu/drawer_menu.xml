@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@android:drawable/ic_menu_today"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_all"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="All Campaigns" />
+        <item
+            android:id="@+id/nav_paid"
+            android:icon="@android:drawable/ic_menu_send"
+            android:title="Paid Only" />
+        <item
+            android:id="@+id/nav_barter"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Barter Only" />
+        <item
+            android:id="@+id/nav_pending"
+            android:icon="@android:drawable/ic_menu_recent_history"
+            android:title="Pending Tasks" />
+        <item
+            android:id="@+id/nav_completed"
+            android:icon="@android:drawable/ic_menu_view"
+            android:title="Completed" />
+    </group>
+</menu>

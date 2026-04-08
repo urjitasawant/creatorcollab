@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FE">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@android:drawable/ic_menu_revert" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/textViewBrandDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                tools:text="Brand Name" />
+
+            <TextView
+                android:id="@+id/textViewAgencyDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                android:textColor="#757575"
+                tools:text="Agency: Sample PR Agency" />
+
+            <TextView
+                android:id="@+id/textViewValueDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                android:textColor="#6200EE"
+                tools:text="₹5,000 - Paid (Upfront)" />
+
+            <!-- Progress Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Campaign Progress"
+                        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+                        android:textColor="#757575" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progressIndicatorDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="12dp"
+                        app:trackCornerRadius="4dp"
+                        app:trackThickness="8dp"
+                        tools:progress="60" />
+
+                    <TextView
+                        android:id="@+id/textViewProgressPercentDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="8dp"
+                        android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+                        android:textStyle="bold"
+                        tools:text="60% Complete" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Dates Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView
+                        android:id="@+id/textViewArrivalDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                        tools:text="Expected Arrival: 2023-12-01" />
+                    <TextView
+                        android:id="@+id/textViewMandateDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                        tools:text="Mandate Shared: 2023-12-05" />
+                    <TextView
+                        android:id="@+id/textViewDeadlineDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                        android:textStyle="bold"
+                        tools:text="Deadline: 2023-12-31" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Workflow Checklist -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Workflow Checklist"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:textStyle="bold" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkProductReceived"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Product Received" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkMandateReceived"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mandate Received" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkVideoShot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Video Shot" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkVideoEdited"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Video Edited" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkSentForApproval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sent for Approval" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkApproved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Approved" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkPosted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Posted" />
+
+            <!-- Deliverables in Checklist (Moved to the end) -->
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkInstaReelDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insta Reel Done"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkInstaCarouselDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insta Carousel Done"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkInstaStoriesDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insta Stories Done"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkYouTubeShortsDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="YouTube Shorts Done"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkPaymentReceived"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Payout Received"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkReimbursementReceived"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reimbursement Received"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <!-- Notes Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Internal Notes"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0">
+                <TextView
+                    android:id="@+id/textViewNotesDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    tools:text="These are some sample notes about the campaign..." />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonEditCollab"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Edit Basic Info"
+                app:icon="@android:drawable/ic_menu_edit" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDelete"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Delete Collaboration"
+                android:textColor="?attr/colorError"
+                app:icon="@android:drawable/ic_menu_delete"
+                app:iconTint="?attr/colorError" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
